@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <title>Project Bootstrap New</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $(".header-bottom .icon-menu").click(function () {
+                $("nav-responsive ul#responsive-menu").stop().slideToggle(500);
+            });
+
+            $(window).scroll(function () {
+                $("nav-responsive ul#responsive-menu").slideUp(500);
+            })
+            $(window).resize(function () {
+                $("nav-responsive ul#responsive-menu").slideUp(500);
+            })
+
+            $('nav-responsive ul #icon-down').click(function () {
+                $("nav-responsive ul#sub-menu-responsive").slideToggle(500);
+            });
+
+            $('#icon-down').click(function () {
+                // $(this).addClass("open");
+                $(this).toggleClass("open");
+            });
+
+            $(window).resize(function () {
+                $("ul#responsive-menu #sub-menu-responsive").slideUp(500);
+                $("#icon-down").removeClass("open");
+            });
+
+            $(window).scroll(function () {
+                $("#responsive-menu #sub-menu-responsive").slideUp(500);
+                $("#icon-down").removeClass("open");
+            });
+
+
+        });
+    </script>
+    <div id="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <p class=""><i class="fa-regular fa-clock"></i>
+                            Thứ 2 - thứ 7: 8:00am - 20:00am</p>
+                    </div>
+                    <div class="col-md-7 text-center pl-0 col-sm-4">
+                        <p class=""><i class="fa-solid fa-envelope"></i>
+                            support@unitop.vn</p>
+                    </div>
+                    <div class="col-md-2 col-sm-4">
+                        <p class="number-phone"><i class="fa-solid fa-phone"></i>
+                            09888.59.692</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-2 col-4">
+                        <div class="icon-logo">
+                            <a href="">
+                                <img class="text-center" src="img/UNITOP.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-7 col-4">
+                        <nav>
+                            <ul class="text-deconration-none list-unstyled list-inline" id="main-menu">
+                                <li class="list-inline-item "><a href="">TRANG CHỦ</a></li>
+                                <li class="list-inline-item "><a href="">GIỚI THIỆU</a></li>
+                                <li class="list-inline-item "><a href="">GIÀY</a></li>
+                                <li class="list-inline-item "><a href="">TÚI XÁCH
+                                        <span><i class="fa-solid fa-angle-down"></i></span></a>
+                                    <ul id="sub-menu" class="shadow">
+                                        <li><a href="">Túi xách tay nữ </a></li>
+                                        <li><a href="">Túi đeo chéo nữ</a></li>
+                                        <li><a href="">Túi bản to</a></li>
+                                        <li><a href="">Túi đeo vai</a></li>
+                                    </ul>
+                                </li>
+                                <li class="list-inline-item "><a href="">ÁO THUN</a></li>
+                                <li class="list-inline-item "><a href="">ĐỒNG HỒ</a></li>
+                                <li class="list-inline-item "><a href="">BLOG</a></li>
+                                <li class="list-inline-item "><a href="">LIÊN HỆ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col-md-2 col-sm-3 col-4">
+                        <div class="icon-search-cart">
+                            <a href="">
+                                <i class="fa-solid fa-magnifying-glass icon-search"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-solid fa-cart-plus icon-cart"></i>
+                            </a>
+                            <span class="badge badge-primary badge-pill mt-0">2</span>
+
+                            <i class="fa-solid fa-bars icon-menu"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav-responsive>
+                <ul class="text-deconration-none" id="responsive-menu">
+                    <li class=""><a href="">Trang chủ</a></li>
+                    <li class=""><a href="">Giới thiệu</a></li>
+                    <li class=""><a href="">Giày</a></li>
+                    <li class=""><a href="">Túi xách</a>
+                        <i class="fa-solid fa-angle-down" id="icon-down"></i>
+                        <ul id="sub-menu-responsive" class="shadow">
+                            <li><a href="">Túi xách tay nữ </a></li>
+                            <li><a href="">Túi đeo chéo nữ</a></li>
+                            <li><a href="">Túi bản to</a></li>
+                            <li><a href="">Túi đeo vai</a></li>
+                        </ul>
+                    </li>
+                    <li class=""><a href="">Áo thun</a></li>
+                    <li class=""><a href="">Đồng hồ</a></li>
+                    <li class=""><a href="">Blog</a></li>
+                    <li class=""><a href="">Liên hệ</a></li>
+                </ul>
+            </nav-responsive>
+        </div>
+    </div>
+    <!-- end header  -->
+    <div id="content">
+        <div class="banner">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href=""> <img class="d-block w-100" style="max-width:100%" src="img/banner.png"
+                                alt="First slide"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href=""> <img class="d-block w-100" style="max-width:100%" src="img/banner.png"
+                                alt="Second slide"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href=""> <img class="d-block w-100" style="max-width:100%" src="img/banner.png"
+                                alt="Third slide"> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="box">
+                        <i class="fa-solid fa-shield-halved icon"></i>
+                        <p class="p-font-size">Đổi trả trong 30 ngày</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="box">
+                        <i class="fa-solid fa-headphones-simple icon"></i>
+                        <p class="p-font-size">Hỗ trợ 24/7 09888.59.692</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="box">
+                        <i class="fa-solid fa-truck icon"></i>
+                        <p class="p-font-size">Miễn phí ship toàn quốc</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <hr> -->
+        <div class="product-new">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3 class="mb-0 title-product">SẢN PHẨM MỚI</h3>
+                        <p class="text-muted excerpt-product">Những sản phẩm là xu thế của thời trang 2019 được ưa
+                            chuộng</p>
+                    </div>
+                </div>
+            </div>
+            <div class="list-product">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-6 col-sm-4">
+                            <div class="product ">
+                                <a href="" class="post-thumb">
+                                    <img class="img-thumbnail border-0 rounded-0" src="img/product-4.jpg" alt="">
+                                </a>
+                                <div class="box-body pl-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                        xét)</span>
+                                    <h6 class="">
+                                        <a href="" class="">Túi xách hiệu JAKA Nhật Bản </a>
+                                    </h6>
+                                    <span>1.200.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 col-sm-4 ">
+                            <div class="product">
+                                <a href="" class="post-thumb">
+                                    <img class="img-thumbnail border-0 rounded-0" src="img/product-3.jpg" alt="">
+                                </a>
+                                <div class="box-body pl-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                        xét)</span>
+                                    <h6 class="">
+                                        <a href="" class="">Túi xách hiệu JAKA Nhật Bản </a>
+                                    </h6>
+                                    <span>3.990.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 col-sm-4 ">
+                            <div class="product">
+                                <a href="" class="post-thumb">
+                                    <img class="img-thumbnail border-0 rounded-0" src="img/product-5.jpg" alt="">
+                                </a>
+                                <div class="box-body pl-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                        xét)</span>
+                                    <h6 class="">
+                                        <a href="" class="">Túi xách hiệu JAKA Nhật Bản </a>
+                                    </h6>
+                                    <span>909.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 col-sm-4 ">
+                            <div class="product">
+                                <a href="" class="post-thumb">
+                                    <img class="img-thumbnail border-0 rounded-0" src="img/product-2.jpg" alt="">
+                                </a>
+                                <div class="box-body pl-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                        xét)</span>
+                                    <h6 class="">
+                                        <a href="" class="">Túi xách hiệu JAKA Nhật Bản </a>
+                                    </h6>
+                                    <span>2.860.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 col-sm-4 ">
+                            <div class="product">
+                                <a href="" class="post-thumb">
+                                    <img class="img-thumbnail border-0 rounded-0" src="img/product-4.jpg" alt="">
+                                </a>
+                                <div class="box-body pl-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                        xét)</span>
+                                    <h6 class="">
+                                        <a href="" class="">Túi xách hiệu JAKA Nhật Bản </a>
+                                    </h6>
+                                    <span>1.200.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 col-sm-4 ">
+                            <div class="product">
+                                <a href="" class="post-thumb">
+                                    <img class="img-thumbnail border-0 rounded-0" src="img/product-3.jpg" alt="">
+                                </a>
+                                <div class="box-body pl-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                        xét)</span>
+                                    <h6 class="">
+                                        <a href="" class="">Túi xách hiệu JAKA Nhật Bản </a>
+                                    </h6>
+                                    <span>3.990.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 col-sm-4">
+                            <div class="product">
+                                <a href="" class="post-thumb">
+                                    <img class="img-thumbnail border-0 rounded-0" src="img/product-5.jpg" alt="">
+                                </a>
+                                <div class="box-body pl-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                        xét)</span>
+                                    <h6 class="">
+                                        <a href="" class="">Túi xách hiệu JAKA Nhật Bản </a>
+                                    </h6>
+                                    <span>909.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 col-sm-4 ">
+                            <div class="product">
+                                <a href="" class="post-thumb">
+                                    <img class="img-thumbnail border-0 rounded-0" src="img/product-2.jpg" alt="">
+                                </a>
+                                <div class="box-body pl-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                        xét)</span>
+                                    <h6 class="">
+                                        <a href="" class="">Túi xách hiệu JAKA Nhật Bản </a>
+                                    </h6>
+                                    <span>2.860.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 pr-0">
+                        <div class="category-1">
+                            <a href="">
+                                <img class="img-thumbnail border-0 p-0 rounded-0" src="img/category-1.jpg" alt="">
+                            </a>
+                            <div class="box-body">
+                                <p>GIÀY</p>
+                                <a href="">Xem Thêm</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 pl-0">
+                        <div class="category-2">
+                            <a href="">
+                                <img class="img-thumbnail border-0 p-0 rounded-0" src="img/category-2.jpg" alt="">
+                            </a>
+                            <div class="box-body">
+                                <p>ĐỒNG HỒ</p>
+                                <a href="">Xem Thêm</a>
+                            </div>
+                        </div>
+                        <div class="category-3">
+                            <a href="">
+                                <img class="img-thumbnail border-0 p-0 rounded-0" src="img/category-3.jpg" alt="">
+                            </a>
+                            <div class="box-body">
+                                <p>QUẦN ÁO</p>
+                                <a href="">Xem Thêm</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="selling">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3 class="mb-0 title-product">BÁN CHẠY</h3>
+                        <p class="text-muted excerpt-product">Bộ sưu tập những sản phẩm bán chạy nhất hệ thống, bây giờ
+                            là của bạn</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="list-product">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-6">
+                            <div class="product mb-4">
+                                <a href="" class="post-thumb">
+                                    <img class="img-thumbnail border-0" src="img/product-11.jpg" alt="">
+                                </a>
+                                <div class="box-body pl-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                        xét)</span>
+                                    <h6 class=""><a href="">Túi xách hiệu JAKA Nhật Bản </a></h6>
+                                    <span>1.200.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-6">
+                            <div class="product mb-4">
+                                <a href="" class="post-thumb">
+                                    <img class="img-thumbnail border-0" src="img/product-10.jpg" alt="">
+                                </a>
+                                <div class="box-body pl-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                        xét)</span>
+                                    <h6 class=""><a href="">Túi xách hiệu JAKA Nhật Bản </a></h6>
+                                    <span>3.999.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-6">
+                            <div class="product mb-4">
+                                <a href="" class="post-thumb">
+                                    <img class="img-thumbnail border-0" src="img/product-6.jpg" alt="">
+                                </a>
+                                <div class="box-body pl-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                        xét)</span>
+                                    <h6 class=""><a href="">Túi xách hiệu JAKA Nhật Bản </a></h6>
+                                    <span>909.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-6">
+                            <div class="product mb-4">
+                                <a href="" class="post-thumb">
+                                    <img class="img-thumbnail border-0" src="img/product-4.jpg" alt="">
+                                </a>
+                                <div class="box-body pl-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                        xét)</span>
+                                    <h6 class=""><a href="">Túi xách hiệu JAKA Nhật Bản </a></h6>
+                                    <span>2.860.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="icon-pre-next">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div class="slider-nav d-flex">
+                                    <div class="pre">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </div>
+                                    <div class="next">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="list-product">
+                <div class="owl-carousel owl-theme">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="product item mb-4">
+                                    <a href="" class="post-thumb">
+                                        <img class="img-thumbnail border-0" src="img/product-11.jpg" alt="">
+                                    </a>
+                                    <div class="box-body pl-1">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                            xét)</span>
+                                        <h6 class=""><a href="">Túi xách hiệu JAKA Nhật Bản </a></h6>
+                                        <span>1.200.000đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="product item mb-4">
+                                    <a href="" class="post-thumb">
+                                        <img class="img-thumbnail border-0" src="img/product-10.jpg" alt="">
+                                    </a>
+                                    <div class="box-body pl-1">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                            xét)</span>
+                                        <h6 class=""><a href="">Túi xách hiệu JAKA Nhật Bản </a></h6>
+                                        <span>1.200.000đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="product item mb-4">
+                                    <a href="" class="post-thumb">
+                                        <img class="img-thumbnail border-0" src="img/product-4.jpg" alt="">
+                                    </a>
+                                    <div class="box-body pl-1">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                            xét)</span>
+                                        <h6 class=""><a href="">Túi xách hiệu JAKA Nhật Bản </a></h6>
+                                        <span>1.200.000đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="product item mb-4">
+                                    <a href="" class="post-thumb">
+                                        <img class="img-thumbnail border-0" src="img/product-6.jpg" alt="">
+                                    </a>
+                                    <div class="box-body pl-1">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star-half-stroke"></i> <span class="text-muted">(8 nhận
+                                            xét)</span>
+                                        <h6 class=""><a href="">Túi xách hiệu JAKA Nhật Bản </a></h6>
+                                        <span>1.200.000đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+        <div class="share">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center ">
+                        <h3 class="mb-0 title-product">CHIA SẺ </h3>
+                        <p class="text-muted mb-5 excerpt-product">Những bài viết mới về thời trang, bạn có thể xem bây
+                            giờ!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="list-product">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-6">
+                            <div class="product text-center border">
+                                <img class="img-thumbnail border-0 p-0 mb-1 rounded-0" src="img/post-1.jpg" alt="">
+                                <span class="font-size-11">Thời trang</span>
+                                <h6 class="mt-2"><a href="" class="text-uppercase "> 5 mẹo cơ bản để phối đồ</a>
+                                </h6>
+                                <span class="text-muted font-size-14">June 10, 2020</span>
+                                <p class="mt-2">Tips and tricks that most people wouldn't highlight when colors.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-6">
+                            <div class="product text-center border">
+                                <img class="img-thumbnail border-0 p-0 mb-1 rounded-0" src="img/post-2.jpg" alt="">
+                                <span class="font-size-11">Thời trang</span>
+                                <h6 class="mt-2"><a href="" class="text-uppercase "> 5 mẹo cơ bản để phối đồ</a>
+                                </h6>
+                                <span class="text-muted font-size-14">June 10, 2020</span>
+                                <p class="mt-2">Tips and tricks that most people wouldn't highlight when colors.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-6">
+                            <div class="product text-center border">
+                                <img class="img-thumbnail border-0 p-0 mb-1 rounded-0" src="img/post-3.jpg" alt="">
+                                <span class="font-size-11">Thời trang</span>
+                                <h6 class="mt-2"><a href="" class="text-uppercase "> 5 mẹo cơ bản để phối đồ</a>
+                                </h6>
+                                <span class="text-muted font-size-14">June 10, 2020</span>
+                                <p class="mt-2">Tips and tricks that most people wouldn't highlight when colors.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="see-more">
+                        <div class="row">
+                            <div class="col-md-12 text-center mt-5">
+                                <a href="">XEM THÊM</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end content  -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 item p-0 col-6">
+                    <div class="box box-1">
+                        <p class="text-danger ">ĐỊA CHỈ</p>
+                        <ul class="list-unstyled ">
+                            <li><a href="" class="text-light"><i class="fa-solid fa-location-dot"></i>
+                                    Tòa nhà N01T5 Ngoại giao Đoàn,
+                                    Bắc Từ Liêm, Hà Nội</a></li>
+                            <li><a href="" class="text-light">
+                                    <i class="fa-solid fa-phone"></i> 097.365.7594
+                                </a></li>
+                            <li><a href="" class="text-light"><i class="fa-solid fa-envelope"></i>
+                                    support@unitop.vn</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-md-3 item p-0 col-6">
+                    <div class="box box-2">
+                        <p class="text-danger ">GIỚI THIỆU</p>
+                        <ul class="list-unstyled ">
+                            <li><a href="" class="text-light">Về chúng tôi</a></li>
+                            <li><a href="" class="text-light">Cách đặt hàng</a></li>
+                            <li><a href="" class="text-light">Kiểm tra đơn hàng</a></li>
+                            <li><a href="" class="text-light">Hỗ trợ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 item p-0 col-6">
+                    <div class="box box-3">
+                        <p class="text-danger ">DANH MỤC</p>
+                        <ul class="list-unstyled ">
+                            <li><a href="" class="text-light">Giày thể thao</a></li>
+                            <li><a href="" class="text-light">Váy</a></li>
+                            <li><a href="" class="text-light">Kính mắt</a></li>
+                            <li><a href="" class="text-light">Túi xách</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 item p-0 col-6">
+                    <div class="box box-4">
+                        <p class="text-danger ">SOCIAL</p>
+                        <ul class="list-unstyled ">
+                            <li><a href="https://www.facebook.com/nguyenvietson250" target="_blank"
+                                    class="text-light"><i class="fa-brands fa-facebook"></i>
+                                    Facebook</a></li>
+                            <li><a href="https://www.youtube.com/user/phancuong100" target="_blank"
+                                    class="text-light"><i class="fa-brands fa-youtube"></i>
+                                    Youtube</a></li>
+                            <li><a href="" target="_blank" class="text-light"><i class="fa-brands fa-twitter"></i>
+                                    Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="license">
+            <div class="container">
+                <div class="row p-0">
+                    <div class="col-md-12 text-center ">
+                        <p class="">
+                            2019 - 2025 UNITOP ACADEMY - UNITOP.VN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
